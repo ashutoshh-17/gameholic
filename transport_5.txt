@@ -1,104 +1,104 @@
 import java.util.Scanner;
 
-interface Vehicle{
+interface Vehicle
+      {
 	void changegear(int a);
 	void speedup(int a);
 	void applybrakes(int a);
-
-}
-class Bicycle implements Vehicle{
+      }
+class Bicycle implements Vehicle
+       {
 	int speed;
 	int gear;
 	Bicycle(){
 
 	speed=10;
 	gear=1;
-
-	}
-public void changegear(int newgear){
+        }
+public void changegear(int newgear)
+        {
 	gear=newgear;
 	System.out.println("Bicycle is now running on gear:"+gear);
-	
 	}
-public void speedup(int increment){
+public void speedup(int increment)
+        {
 	System.out.println("Initially speed of bicycle was :"+speed+"km/hr.");
 	speed=speed+increment;
 	System.out.println("After increasing speed of bicycle is"+speed+"km/hr");
-
-	}
-public void applybrakes(int decrement){
+        }
+public void applybrakes(int decrement)
+       {
 	System.out.println("Initially speed of bicycle was"+speed+"km/hr.");
 	speed=speed-decrement;
 	System.out.println("After applying brakes speed of bicycle is"+speed+"km/hr");
-
-	}
+        }
 public void display()
-{
+      {
 	System.out.println("speed:"+speed+"km/hr.\ngear:"+gear);
-
+      }
 }
-}
-class Bike implements Vehicle{
+class Bike implements Vehicle
+    {
 	int speed;
 	int gear;
 Bike(){
 	speed=20;
 	gear=1;
 	}
-public void changegear(int newgear){
+public void changegear(int newgear)
+        {
 	gear=newgear;
 	System.out.println("Bike is now running on gear:"+gear);
-	
 	}
-public void speedup(int increment){
+public void speedup(int increment)
+        {
 	System.out.println("Initially speed of Bike was :"+speed+"km/hr.");
 	speed=speed+increment;
 	System.out.println("After increasing speed of Bike is"+speed+"km/hr");
-
-	}
-public void applybrakes(int decrement){
+        }
+public void applybrakes(int decrement)
+        {
 	System.out.println("Initially speed of Bike was"+speed+"km/hr.");
 	speed=speed-decrement;
 	System.out.println("After applying brakes speed of Bike is"+speed+"km/hr");
-
-	}
+        }
 public void display()
-{
+       {
 	System.out.println("speed:"+speed+"km/hr.\ngear:"+gear);
-
-}
-}
-class Car implements Vehicle{
+       }
+    }
+class Car implements Vehicle
+    {
 	int speed;
 	int gear;
 Car(){
 	speed=20;
 	gear=1;
 	}
-public void changegear(int newgear){
+public void changegear(int newgear)
+        {
 	gear=newgear;
 	System.out.println("Car is now running on gear:"+gear);
-	
 	}
-public void speedup(int increment){
+public void speedup(int increment)
+        {
 	System.out.println("Initially speed of Car was :"+speed+"km/hr.");
 	speed=speed+increment;
 	System.out.println("After increasing speed of Car is"+speed+"km/hr");
-
-	}
-public void applybrakes(int decrement){
+        }
+public void applybrakes(int decrement)
+        {
 	System.out.println("Initially speed of Car was"+speed+"km/hr.");
 	speed=speed-decrement;
 	System.out.println("After applying brakes speed of Car is"+speed+"km/hr");
-
-	}
+        }
 public void display()
-{
+       {
 	System.out.println("speed:"+speed+"km/hr.\ngear:"+gear);
-
+       }
 }
-}
-public class Transport{
+public class Transport
+{
 	public static void main(String [] args){
 	Scanner sc = new Scanner(System.in);
 	System.out.println("\n Select the mode of transportation: \n\t 1.Bicycle\n\t2.Bike\n\t3.Car\n\t");
