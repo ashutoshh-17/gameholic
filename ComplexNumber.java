@@ -7,7 +7,7 @@ public class ComplexNumber {
     }
 
     public void show() {
-        System.out.println(this.real + "r" + this.img + "i");
+        System.out.println(this.real + "+" + this.img + "i");
     }
 
     public static ComplexNumber add(ComplexNumber n1, ComplexNumber n2) {
