@@ -46,7 +46,7 @@ class Database {
 		 pw.close(); 
 		}
 	
-	// ---------------------- addRecords method ---------------------- //
+	// ---------------------- readRecords method ---------------------- //
 	public void readRecords() throws IOException  {
 		try  {   
 			// Open the file
@@ -65,7 +65,7 @@ class Database {
 		}  
 	}
 	
-	// ---------------------- addRecords method ---------------------- //
+	// ---------------------- searchRecords method ---------------------- //
 	public void searchRecords() throws IOException  {
 		try  {   // Open the file 
 			BufferedReader file = new BufferedReader(new   FileReader("sample.txt")); 
@@ -96,7 +96,7 @@ class Database {
 			}
 		}  
 	
-	// ---------------------- addRecords method ---------------------- //
+	// ---------------------- deleteRecords method ---------------------- //
 	public void deleteRecords() throws IOException  {
 		try  {   // Open the file
 			BufferedReader file1 = new BufferedReader(new FileReader("sample.txt")); 
@@ -139,7 +139,7 @@ class Database {
 			} 
 		} 
 	
-	// ---------------------- addRecords method ---------------------- //
+	// ---------------------- updateRecords method ---------------------- //
 	public void updateRecords() throws IOException  {
 		try  {  
 			// Open the file
@@ -189,7 +189,7 @@ class Database {
 			} 
 		} 
 	
-	// ---------------------- addRecords method ---------------------- //		
+	// ---------------------- exception method ---------------------- //		
 	public void clear(String filename) throws IOException  { 
 		// Create a blank file 
 		PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(filename)));
