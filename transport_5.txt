@@ -1,0 +1,233 @@
+//Name Ashutosh Waghire
+//Class SE IT
+//Roll No 71
+//Batch S3
+
+//Aim Design and develop a context for given case study and implement an interface for Vehicles Consider the example of vehicles like bicycle, car and bike. 
+//All Vehicles have common functionalities such as Gear Change, Speed up and apply breaks. 
+//Make an interface and put all these common functionalities. Bicycle, Bike, Car classes should be implemented for all 
+//These functionalities in their own class in their own way.
+
+import java.util.Scanner;
+
+interface Vehicle{
+	void changegear(int a);
+	void speedup(int a);
+	void applybrakes(int a);
+
+}
+class Bicycle implements Vehicle{
+	int speed;
+	int gear;
+	Bicycle(){
+
+	speed=10;
+	gear=1;
+
+	}
+public void changegear(int newgear){
+	gear=newgear;
+	System.out.println("Bicycle is now running on gear:"+gear);
+	
+	}
+public void speedup(int increment){
+	System.out.println("Initially speed of bicycle was :"+speed+"km/hr.");
+	speed=speed+increment;
+	System.out.println("After increasing speed of bicycle is"+speed+"km/hr");
+
+	}
+public void applybrakes(int decrement){
+	System.out.println("Initially speed of bicycle was"+speed+"km/hr.");
+	speed=speed-decrement;
+	System.out.println("After applying brakes speed of bicycle is"+speed+"km/hr");
+
+	}
+public void display()
+{
+	System.out.println("speed:"+speed+"km/hr.\ngear:"+gear);
+
+}
+}
+class Bike implements Vehicle{
+	int speed;
+	int gear;
+Bike(){
+	speed=20;
+	gear=1;
+	}
+public void changegear(int newgear){
+	gear=newgear;
+	System.out.println("Bike is now running on gear:"+gear);
+	
+	}
+public void speedup(int increment){
+	System.out.println("Initially speed of Bike was :"+speed+"km/hr.");
+	speed=speed+increment;
+	System.out.println("After increasing speed of Bike is"+speed+"km/hr");
+
+	}
+public void applybrakes(int decrement){
+	System.out.println("Initially speed of Bike was"+speed+"km/hr.");
+	speed=speed-decrement;
+	System.out.println("After applying brakes speed of Bike is"+speed+"km/hr");
+
+	}
+public void display()
+{
+	System.out.println("speed:"+speed+"km/hr.\ngear:"+gear);
+
+}
+}
+class Car implements Vehicle{
+	int speed;
+	int gear;
+Car(){
+	speed=20;
+	gear=1;
+	}
+public void changegear(int newgear){
+	gear=newgear;
+	System.out.println("Car is now running on gear:"+gear);
+	
+	}
+public void speedup(int increment){
+	System.out.println("Initially speed of Car was :"+speed+"km/hr.");
+	speed=speed+increment;
+	System.out.println("After increasing speed of Car is"+speed+"km/hr");
+
+	}
+public void applybrakes(int decrement){
+	System.out.println("Initially speed of Car was"+speed+"km/hr.");
+	speed=speed-decrement;
+	System.out.println("After applying brakes speed of Car is"+speed+"km/hr");
+
+	}
+public void display()
+{
+	System.out.println("speed:"+speed+"km/hr.\ngear:"+gear);
+
+}
+}
+public class Transport{
+	public static void main(String [] args){
+	Scanner sc = new Scanner(System.in);
+	System.out.println("\n Select the mode of transportation: \n\t 1.Bicycle\n\t2.Bike\n\t3.Car\n\t");
+	int ch = sc.nextInt();
+	Bicycle b1=new Bicycle();
+	Bike Bi1=new Bike();
+	Car c1 = new Car();
+	while(ch >0 && ch<4){
+	System.out.println("\n\t1.Change Gear\n\t2.Increase Speed\n\t3.Decrease Speed\n\t4.Display present state\n\t5.Exit");
+	int operationno= sc.nextInt();
+	switch(operationno)
+{
+	case 1: 
+	System.out.println("Which Gear do you want to use?");
+	int g = sc.nextInt();
+	if(ch==1)
+	b1.changegear(g);
+	else if(ch==2)
+	Bi1.changegear(g);
+	else 
+	c1.changegear(g);
+	break;
+	case 2:
+	System.out.println("By how many Km/hr do you want to increase speed?");
+	int incre=sc.nextInt();
+	if (ch==1)
+	b1.speedup(incre);
+	else if (ch==2)
+	Bi1.speedup(incre);
+	else 
+	c1.speedup(incre);
+	break;
+	case 3:
+	System.out.println("By how km/hr do you want to decrease speed?");
+	int decre= sc.nextInt();
+	if (ch==1)
+	b1.applybrakes(decre);
+	else if (ch==2)
+	Bi1.applybrakes(decre);
+	else
+	c1.applybrakes(decre);
+	break;
+	case 4:
+	if (ch==1)
+	b1.display();
+	else if (ch==2)
+	Bi1.display();
+	else
+	c1.display();
+	break;
+	case 5:
+	System.exit(0);
+	default: System.out.println("Enter Valid Choice");
+	
+}
+}
+System.out.println("Invalid Choice!!");
+
+}
+}
+/*Output
+
+C:\Users\Administrator>E:
+
+E:\>javac Transport.java
+
+E:\>java Transport
+
+ Select the mode of transportation:
+         1.Bicycle
+        2.Bike
+        3.Car
+
+3
+
+        1.Change Gear
+        2.Increase Speed
+        3.Decrease Speed
+        4.Display present state
+        5.Exit
+1
+Which Gear do you want to use?
+2
+Car is now running on gear:2
+
+        1.Change Gear
+        2.Increase Speed
+        3.Decrease Speed
+        4.Display present state
+        5.Exit
+2
+By how many Km/hr do you want to increase speed?
+200
+Initially speed of Car was :20km/hr.
+After increasing speed of Car is220km/hr
+
+        1.Change Gear
+        2.Increase Speed
+        3.Decrease Speed
+        4.Display present state
+        5.Exit
+3
+By how km/hr do you want to decrease speed?
+150
+Initially speed of Car was220km/hr.
+After applying brakes speed of Car is70km/hr
+
+        1.Change Gear
+        2.Increase Speed
+        3.Decrease Speed
+        4.Display present state
+        5.Exit
+4
+speed:70km/hr.
+gear:2
+
+        1.Change Gear
+        2.Increase Speed
+        3.Decrease Speed
+        4.Display present state
+        5.Exit
+5
